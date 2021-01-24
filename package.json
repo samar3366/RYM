@@ -6,7 +6,7 @@
     "yarn": ">= 1.0.0"
   },
   "scripts": {
-    "build": "lerna run --scope={server,client,mobile} --parallel build --stream",
+    "build": "lerna run --scope={server,client} --parallel build --stream",
     "clean": "lerna run clean --stream",
     "start": "lerna run --scope=server start --stream",
     "watch": "lerna run --scope={server,client} --parallel watch --stream",
@@ -70,11 +70,10 @@
   "license": "MIT",
   "workspaces": [
     "config",
-    "packages/*",
+    "packages/client",
+    "packages/common",
+    "packages/server",
     "modules/**/client-react",
-    "modules/**/client-react-native",
-    "modules/**/client-angular",
-    "modules/**/client-vue",
     "modules/**/common",
     "modules/**/common-react",
     "modules/**/server-ts"
